@@ -9,7 +9,6 @@ export default function App() {
   
   return (
     <Layout>
-      <div className="App">
         <Router>
           <Switch>
             <Route exact path="/" component={Index} />
@@ -17,7 +16,6 @@ export default function App() {
             <Route path="*" component={NotFound} />
           </Switch>
         </Router>   
-      </div>
     </Layout>
   );
 }

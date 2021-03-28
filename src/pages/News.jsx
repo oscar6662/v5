@@ -3,12 +3,12 @@ import {
   useParams
 } from "react-router-dom";
 
-import { News } from '../components/news/News';
+import { NewsList } from '../components/news-list/NewsList';
 
 
 export function NewsPage() {
   const id = useParams().id;
   return (  
-    <News flokk = {id}></News>
+    <NewsList flokk = {id}></NewsList>
 );
 }

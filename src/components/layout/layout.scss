@@ -1,0 +1,19 @@
+.footer{
+    margin-top: 50px;
+}
+
+.boxPool{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    border: 1px solid black;
+    min-width: 25%;;
+    margin:25px;
+    border-radius: 3px;
+    background-color: antiquewhite;
+    h3{
+        font-size: 22px;
+        padding: 10px;
+    }
+}
