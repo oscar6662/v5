@@ -1,0 +1,2 @@
+(this["webpackJsonpvef2-2021-v5-synilausn"]=this["webpackJsonpvef2-2021-v5-synilausn"]||[]).push([[0],{10:function(n,e,t){},11:function(n,e,t){"use strict";t.r(e);var c=t(1),s=t.n(c),i=t(3),r=t.n(i),o=t(4);function u(n){Object(o.a)(n)}var a=t(0);function j(){return Object(a.jsx)(u,{children:"..."})}t(10);r.a.render(Object(a.jsx)(s.a.StrictMode,{children:Object(a.jsx)(j,{})}),document.getElementById("root"))}},[[11,1,2]]]);
+//# sourceMappingURL=main.753a3d15.chunk.js.map
