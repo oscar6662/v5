@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 import { News } from '../news/News';
+import { NotFound } from '../../pages/NotFound';
+
 const apiUrl = process.env.REACT_APP_API_URL;
 
 export function NewsList({flokk}) {
@@ -30,7 +32,6 @@ export function NewsList({flokk}) {
     };
     fetchData();
   },[flokk]);
-
   
   
   return (
@@ -52,10 +53,16 @@ export function NewsList({flokk}) {
            ))}
            </div>
          ):(
-           <div className="box">
-             <h3>{title}</h3>
-             <News flokk = {flokk} ></News>
-             <a href ='/'>Til Baka</a>
+           <div>
+           {(title!== "")?(
+            <div className="box">
+            <h3>{title}</h3>
+            <News flokk = {flokk} ></News>
+            <a href ='/'>Til Baka</a>
+          </div>
+           ):(
+             <NotFound></NotFound>
+           )}
            </div>
          )}
          </div>

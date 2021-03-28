@@ -2,6 +2,10 @@
 
 export function NotFound() {
   return(
-    <p>Not found!</p>
+    <div>
+      <p>Not found!</p>
+      <a href = '/'>Til baka</a>
+    </div>
+    
   );
 }
