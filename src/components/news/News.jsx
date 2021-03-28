@@ -4,6 +4,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 export function News({ flokk  }) {
   const [data, setData] = useState([]);
+  const [news, setNews] = useState([])
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -14,7 +15,8 @@ export function News({ flokk  }) {
       try {
         const result = await fetch(apiUrl+flokk);
         const json = await result.json();
-        setData(json.items);
+        setNews(json.items);
+        setData(json);
       } catch (error) {
         setIsError(true);
       }
@@ -34,8 +36,9 @@ export function News({ flokk  }) {
         <div>Loading ...</div>
       ) : (
         <div class = "app">
-          {data.map(item => (
-            <p>{item.title}</p>
+          <h2>{data.title}</h2>
+          {news.map(item => (
+            <a href = "{item.link}">{item.title}</a>
           ))}
         </div>
           
