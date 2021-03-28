@@ -27,7 +27,7 @@ export function News({ flokk, amount }) {
     };
  
     fetchData();
-  },[]);
+  },[amount, flokk]);
 
 
   return (
@@ -36,9 +36,9 @@ export function News({ flokk, amount }) {
       {isLoading ? (
         <div>Loading news ...</div>
       ) : (
-        <ul class = "list">
+        <ul className = "list">
           {news.map(item => (
-            <li><a href = "{item.link}">{item.title}</a></li>
+            <li><a href = {item.link}>{item.title}</a></li>
           ))}
         </ul>
  

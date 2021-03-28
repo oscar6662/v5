@@ -16,13 +16,11 @@ export function NewsList({flokk}) {
       try {
         const result = await fetch(apiUrl);
         const json = await result.json();
-        if(flokk !== "allar"){        
+        if(flokk !== "index"){        
           for(let i = 0; i<json.length; i++)
             if(json[i].id===flokk){
-              console.log("helloasd");
               setTitle(json[i].title);
             }
-              
          }
         setData(json);
       } catch (error) {
@@ -30,21 +28,19 @@ export function NewsList({flokk}) {
       }
       setIsLoading(false);
     };
- 
     fetchData();
-  },[]);
+  },[flokk]);
 
   
   
   return (
     <div>
- 
       {isError && <div>Something went wrong ...</div>}
       {isLoading ?(
         <p>loading</p>
       ):(
         <div>
-        {(flokk === "allar") ? (
+        {(flokk === "index") ? (
           <div className="boxPool"> 
             
            {data.map(item => (
@@ -63,8 +59,7 @@ export function NewsList({flokk}) {
            </div>
          )}
          </div>
-      )}
-      
+      )}   
     </div>
   );
 }
